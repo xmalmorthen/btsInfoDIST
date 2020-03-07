@@ -1,0 +1,1172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object id="fraMain" class="tk.Frame">
+    <property name="height">1000</property>
+    <property name="width">1500</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">False</property>
+      <property name="row">0</property>
+      <property name="sticky">nsew</property>
+      <rows>
+        <row id="0">
+          <property name="weight">1</property>
+        </row>
+        <row id="1">
+          <property name="weight">2</property>
+        </row>
+      </rows>
+      <columns>
+        <column id="0">
+          <property name="weight">1</property>
+        </column>
+        <column id="1">
+          <property name="weight">1</property>
+        </column>
+      </columns>
+    </layout>
+    <child>
+      <object id="fraLogos" class="ttk.Frame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">2</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">s</property>
+        </layout>
+        <child>
+          <object id="lblLogo" class="ttk.Label">
+            <property name="text" translatable="yes">Label_1</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">n</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object id="fraCONFIGS" class="tk.Frame">
+        <property name="borderwidth">2</property>
+        <property name="height">200</property>
+        <property name="padx">10</property>
+        <property name="relief">ridge</property>
+        <property name="takefocus">false</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property name="sticky">ne</property>
+          <rows>
+            <row id="0">
+              <property name="weight">0</property>
+            </row>
+            <row id="5">
+              <property name="weight">0</property>
+            </row>
+            <row id="6">
+              <property name="weight">0</property>
+            </row>
+          </rows>
+          <columns>
+            <column id="0">
+              <property name="weight">0</property>
+            </column>
+          </columns>
+        </layout>
+        <child>
+          <object id="lblTitle" class="ttk.Label">
+            <property name="font">{TkCaptionFont } 20 {bold}</property>
+            <property name="padding">10</property>
+            <property name="text" translatable="yes">CONFIGURACIÓN</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object id="fraCARRIER" class="ttk.Frame">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+            <child>
+              <object id="lblTitle_1" class="ttk.Label">
+                <property name="text" translatable="yes">OPERADOR</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="cmbCARRIER" class="ttk.Combobox">
+                <property name="justify">center</property>
+                <property name="state">readonly</property>
+                <property name="textvariable">string:varCmbCARRIER</property>
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="cmbCARRIERChange" add="" />
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="fraVALORESDEBTS" class="ttk.Frame">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+            <child>
+              <object id="lblTitle_2" class="ttk.Label">
+                <property name="anchor">center</property>
+                <property name="font">{TkCaptionFont 20} 12 {bold}</property>
+                <property name="padding">3</property>
+                <property name="text" translatable="yes">VALORES DE BTS</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblTitle_3" class="ttk.Label">
+                <property name="text" translatable="yes">PAÍS</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="cmbMCC" class="ttk.Combobox">
+                <property name="justify">center</property>
+                <property name="state">readonly</property>
+                <property name="textvariable">string:varCmbMCC</property>
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="cmbMCCChange" add="" />
+                <layout>
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblTitle_4" class="ttk.Label">
+                <property name="text" translatable="yes">OPERADOR</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="cmbMNC" class="ttk.Combobox">
+                <property name="justify">center</property>
+                <property name="state">readonly</property>
+                <property name="textvariable">string:varCmbMNC</property>
+                <property name="validate">key</property>
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="cmbMNCChange" add="" />
+                <layout>
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblTitle_5" class="ttk.Label">
+                <property name="text" translatable="yes">ÁREA</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="eLAC" class="ttk.Entry">
+                <property name="justify">center</property>
+                <property name="textvariable">string:varELAC</property>
+                <property name="validate">all</property>
+                <property name="validatecommand">validateELAC</property>
+                <property name="validatecommand_args">%P</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblTitle_6" class="ttk.Label">
+                <property name="text" translatable="yes">CELDA</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">4</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="eCI" class="ttk.Entry">
+                <property name="justify">center</property>
+                <property name="textvariable">string:varECI</property>
+                <property name="validate">all</property>
+                <property name="validatecommand">validateECI</property>
+                <property name="validatecommand_args">%P</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">4</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="fraNUVELESRXTX" class="ttk.Frame">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+            <child>
+              <object id="lblTitle_7" class="ttk.Label">
+                <property name="font">{TkCaptionFont } 12 {bold}</property>
+                <property name="padding">3</property>
+                <property name="text" translatable="yes">NIVELES DE SERVICIO</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblTitle_8" class="ttk.Label">
+                <property name="font">TkDefaultFont</property>
+                <property name="padding">3</property>
+                <property name="text" translatable="yes">RXGAIN</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="sleRXGAIN" class="ttk.Scale">
+                <property name="command">sleRXGAINChange</property>
+                <property name="from_">1</property>
+                <property name="orient">horizontal</property>
+                <property name="to">52</property>
+                <property name="value">1</property>
+                <property name="variable">string:varSleRXGAIN</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblTitle_9" class="ttk.Label">
+                <property name="text" translatable="yes">POWER</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="slePOWER" class="ttk.Scale">
+                <property name="command">slePOWERChange</property>
+                <property name="from_">1</property>
+                <property name="orient">horizontal</property>
+                <property name="to">20</property>
+                <property name="value">1</property>
+                <property name="variable">string:varSlePOWER</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblRXGAINVal" class="ttk.Label">
+                <property name="text" translatable="yes">1</property>
+                <layout>
+                  <property name="column">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblPOWERVal" class="ttk.Label">
+                <property name="text" translatable="yes">1</property>
+                <layout>
+                  <property name="column">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="fraRANGODESERVICIO" class="ttk.Frame">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+            <child>
+              <object id="lblTitle_10" class="ttk.Label">
+                <property name="font">{TkCaptionFont } 12 {bold}</property>
+                <property name="text" translatable="yes">RANGO DE SERVICIO</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblTitle_11" class="ttk.Label">
+                <property name="text" translatable="yes">NIVEL DE ALCANCE DE SEÑAL</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="sleTA" class="ttk.Scale">
+                <property name="command">sleTAChange</property>
+                <property name="from_">0</property>
+                <property name="orient">horizontal</property>
+                <property name="to">62</property>
+                <property name="value">0</property>
+                <property name="variable">string:varSleTA</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblTAval" class="ttk.Label">
+                <property name="text" translatable="yes">0</property>
+                <layout>
+                  <property name="column">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="fraIDENTIFICADORDEBTS" class="ttk.Frame">
+            <property name="height">197</property>
+            <property name="padding">10</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">5</property>
+              <property name="sticky">s</property>
+            </layout>
+            <child>
+              <object id="lblTitle_12" class="ttk.Label">
+                <property name="font">{TkCaptionFont } 12 {bold}</property>
+                <property name="text" translatable="yes">IDENTIFICADOR DE BTS</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="fraInfoGroup" class="ttk.Frame">
+                <property name="height">200</property>
+                <property name="padding">5</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+                <child>
+                  <object id="lblTitle_13" class="ttk.Label">
+                    <property name="font">{TkCaptionFont } 12 {bold}</property>
+                    <property name="text" translatable="yes">MCC</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="lblTitle_14" class="ttk.Label">
+                    <property name="font">{TkCaptionFont } 12 {bold}</property>
+                    <property name="text" translatable="yes">MNC</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="lblTitle_15" class="ttk.Label">
+                    <property name="font">{TkCaptionFont } 12 {bold}</property>
+                    <property name="text" translatable="yes">LAC</property>
+                    <layout>
+                      <property name="column">2</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="lblTitle_16" class="ttk.Label">
+                    <property name="font">{TkCaptionFont } 12 {bold}</property>
+                    <property name="text" translatable="yes">CI</property>
+                    <layout>
+                      <property name="column">3</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="lblMCCval" class="ttk.Label">
+                    <property name="font">{TkCaptionFont } 16 {bold}</property>
+                    <property name="foreground">#ff0000</property>
+                    <property name="justify">left</property>
+                    <property name="text" translatable="yes">----</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="lblMNCval" class="ttk.Label">
+                    <property name="font">{TkCaptionFont } 16 {bold}</property>
+                    <property name="foreground">#ff0000</property>
+                    <property name="text" translatable="yes">----</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="padx">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="lblLACval" class="ttk.Label">
+                    <property name="font">{TkCaptionFont } 16 {bold}</property>
+                    <property name="foreground">#ff0000</property>
+                    <property name="text" translatable="yes">----</property>
+                    <layout>
+                      <property name="column">2</property>
+                      <property name="padx">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="lblCIval" class="ttk.Label">
+                    <property name="font">{TkCaptionFont } 16 {bold}</property>
+                    <property name="foreground">#ff0000</property>
+                    <property name="text" translatable="yes">----</property>
+                    <layout>
+                      <property name="column">3</property>
+                      <property name="padx">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="fraBTNS" class="ttk.Frame">
+            <property name="height">196</property>
+            <property name="padding">5</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="pady">20</property>
+              <property name="propagate">True</property>
+              <property name="row">6</property>
+              <property name="sticky">s</property>
+              <rows>
+                <row id="0">
+                  <property name="weight">0</property>
+                </row>
+                <row id="1">
+                  <property name="weight">0</property>
+                </row>
+              </rows>
+              <columns>
+                <column id="0">
+                  <property name="weight">0</property>
+                </column>
+                <column id="1">
+                  <property name="weight">0</property>
+                </column>
+              </columns>
+            </layout>
+            <child>
+              <object id="btnCANCELAR" class="ttk.Button">
+                <property name="command">btnCANCELARClick</property>
+                <property name="cursor">arrow</property>
+                <property name="takefocus">true</property>
+                <property name="text" translatable="yes">
+  CANCELAR LOS VALORES SELECCIONADOS
+</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="btnAPLICARCONFIG" class="ttk.Button">
+                <property name="command">btnAPLICARCONFIGClick</property>
+                <property name="text" translatable="yes">
+  APLICAR LOS VALORES SELECCIONADOS
+</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="btnCERRAR" class="ttk.Button">
+                <property name="command">btnCERRARClick</property>
+                <property name="state">normal</property>
+                <property name="text" translatable="yes">
+  CERRAR SISTEMA  
+</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object id="fraSYSTEM" class="tk.Frame">
+        <property name="borderwidth">2</property>
+        <property name="height">200</property>
+        <property name="padx">10</property>
+        <property name="relief">ridge</property>
+        <property name="takefocus">false</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipadx">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property name="sticky">nw</property>
+          <rows>
+            <row id="0">
+              <property name="weight">0</property>
+            </row>
+            <row id="1">
+              <property name="weight">0</property>
+            </row>
+            <row id="2">
+              <property name="weight">0</property>
+            </row>
+            <row id="3">
+              <property name="weight">0</property>
+            </row>
+            <row id="5">
+              <property name="weight">0</property>
+            </row>
+            <row id="6">
+              <property name="weight">0</property>
+            </row>
+          </rows>
+          <columns>
+            <column id="0">
+              <property name="weight">0</property>
+            </column>
+          </columns>
+        </layout>
+        <child>
+          <object id="fraBTNS_1" class="ttk.Frame">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object id="btnDETENER" class="ttk.Button">
+                <property name="command">btnDETENERClick</property>
+                <property name="text" translatable="yes">DETENER</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="btnEJECUTAR" class="ttk.Button">
+                <property name="command">btnEJECUTARClick</property>
+                <property name="text" translatable="yes">EJECUTAR</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="fraTEXTOMENSAJE" class="ttk.Frame">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+            <child>
+              <object id="lblTitle_17" class="ttk.Label">
+                <property name="font">{TkCaptionFont } 12 {bold}</property>
+                <property name="text" translatable="yes">TEXTO DEL MENSAJE</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="txtTEXTOMENSAJE" class="tk.Text">
+                <property name="height">7</property>
+                <property name="maxundo">10</property>
+                <property name="undo">true</property>
+                <property name="width">50</property>
+                <property name="wrap">word</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="btnAPLICARTEXTOMENSJE" class="ttk.Button">
+                <property name="command">btnAPLICARTEXTOMENSJEClick</property>
+                <property name="text" translatable="yes">APLICAR</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="fraESTATUSSISTEMA" class="ttk.Frame">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+            <child>
+              <object id="lblTitle_18" class="ttk.Label">
+                <property name="anchor">w</property>
+                <property name="font">{TkCaptionFont } 12 {bold}</property>
+                <property name="text" translatable="yes">ESTATUS DEL SISTEMA</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="fraGroup" class="ttk.Frame">
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <rows>
+                    <row id="0">
+                      <property name="weight">0</property>
+                    </row>
+                    <row id="1">
+                      <property name="weight">0</property>
+                    </row>
+                  </rows>
+                  <columns>
+                    <column id="0">
+                      <property name="weight">0</property>
+                    </column>
+                    <column id="1">
+                      <property name="weight">0</property>
+                    </column>
+                  </columns>
+                </layout>
+                <child>
+                  <object id="fraDIAGNOSTICO" class="ttk.Frame">
+                    <property name="height">200</property>
+                    <property name="padding">10</property>
+                    <property name="width">200</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                    <child>
+                      <object id="lblTitle_19" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {bold}</property>
+                        <property name="text" translatable="yes">DIAGNOSTICO INICIAL</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="columnspan">2</property>
+                          <property name="pady">10</property>
+                          <property name="propagate">True</property>
+                          <property name="row">0</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblTitle_20" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {}</property>
+                        <property name="text" translatable="yes">T4552</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">1</property>
+                          <property name="sticky">e</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblTERMINALval" class="ttk.Label">
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="propagate">True</property>
+                          <property name="row">1</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblTitle_21" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {}</property>
+                        <property name="text" translatable="yes">R4544</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">2</property>
+                          <property name="sticky">e</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblRedval" class="ttk.Label">
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="propagate">True</property>
+                          <property name="row">2</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblTitle_22" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {}</property>
+                        <property name="text" translatable="yes">S4552</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">3</property>
+                          <property name="sticky">e</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblSERVIDORval" class="ttk.Label">
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="propagate">True</property>
+                          <property name="row">3</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblTitle_23" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {}</property>
+                        <property name="text" translatable="yes">R4144</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">4</property>
+                          <property name="sticky">e</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblRADIOval" class="ttk.Label">
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="propagate">True</property>
+                          <property name="row">4</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object id="fraUPTIME" class="ttk.Frame">
+                    <property name="height">200</property>
+                    <property name="padding">10</property>
+                    <property name="width">200</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                      <property name="sticky">ns</property>
+                    </layout>
+                    <child>
+                      <object id="lblTitle_24" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {bold}</property>
+                        <property name="text" translatable="yes">UPTIME DEL SISTEMA</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="pady">10</property>
+                          <property name="propagate">True</property>
+                          <property name="row">0</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblUPTIMEval" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 24 {bold}</property>
+                        <property name="text" translatable="yes">00:00:00</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">1</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object id="fraSERVICIOS" class="ttk.Frame">
+                    <property name="height">200</property>
+                    <property name="padding">10</property>
+                    <property name="width">200</property>
+                    <layout>
+                      <property name="column">2</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                      <property name="sticky">ns</property>
+                    </layout>
+                    <child>
+                      <object id="lblTitle_25" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {bold}</property>
+                        <property name="text" translatable="yes">ESTADO DE SERVICIO</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="columnspan">2</property>
+                          <property name="pady">10</property>
+                          <property name="propagate">True</property>
+                          <property name="row">0</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblTitle_26" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {}</property>
+                        <property name="text" translatable="yes">A5354</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">1</property>
+                          <property name="sticky">e</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblASTERISKval" class="ttk.Label">
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="propagate">True</property>
+                          <property name="row">1</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblTitle_27" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {}</property>
+                        <property name="text" translatable="yes">S4950</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">2</property>
+                          <property name="sticky">e</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblSIPAUTHSERVERval" class="ttk.Label">
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="propagate">True</property>
+                          <property name="row">2</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblTitle_28" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {}</property>
+                        <property name="text" translatable="yes">S4D51</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">3</property>
+                          <property name="sticky">e</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblSMQUEUEval" class="ttk.Label">
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="propagate">True</property>
+                          <property name="row">3</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblTitle_29" class="ttk.Label">
+                        <property name="font">{TkCaptionFont } 10 {}</property>
+                        <property name="text" translatable="yes">B5453</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">4</property>
+                          <property name="sticky">e</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object id="lblBTSval" class="ttk.Label">
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="propagate">True</property>
+                          <property name="row">4</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="Frame_12" class="ttk.Frame">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">6</property>
+              <rows>
+                <row id="0">
+                  <property name="weight">0</property>
+                </row>
+                <row id="1">
+                  <property name="weight">0</property>
+                </row>
+                <row id="2">
+                  <property name="weight">0</property>
+                </row>
+              </rows>
+              <columns>
+                <column id="0">
+                  <property name="weight">0</property>
+                </column>
+                <column id="1">
+                  <property name="weight">0</property>
+                </column>
+              </columns>
+            </layout>
+            <child>
+              <object id="lblTitle_30" class="ttk.Label">
+                <property name="font">{TkCaptionFont } 20 {bold}</property>
+                <property name="foreground">#ff0000</property>
+                <property name="text" translatable="yes">CARGA DEL SISTEMA</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="txtCARGASISTEMA" class="tk.Text">
+                <property name="autoseparators">true</property>
+                <property name="font">{TkCaptionFont } 8 {}</property>
+                <property name="height">16</property>
+                <property name="insertunfocussed">none</property>
+                <property name="state">normal</property>
+                <property name="tabstyle">tabular</property>
+                <property name="width">69</property>
+                <property name="wrap">word</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="sBarCargaSistema" class="ttk.Scrollbar">
+                <property name="orient">vertical</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">ns</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="Separator_1" class="ttk.Separator">
+            <property name="orient">horizontal</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">ew</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object id="Separator_2" class="ttk.Separator">
+            <property name="orient">horizontal</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">ew</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object id="Separator_3" class="ttk.Separator">
+            <property name="orient">horizontal</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">5</property>
+              <property name="sticky">ew</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
