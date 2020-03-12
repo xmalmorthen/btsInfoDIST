@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <interface>
-  <object class="ttk.Frame" id="fraMain">
+  <object id="fraMain" class="ttk.Frame">
     <property name="height">600</property>
     <property name="padding">10</property>
     <property name="width">800</property>
@@ -8,6 +8,7 @@
       <property name="column">0</property>
       <property name="propagate">False</property>
       <property name="row">0</property>
+      <property name="sticky">nsew</property>
       <rows>
         <row id="0">
           <property name="weight">1</property>
@@ -29,7 +30,7 @@
       </columns>
     </layout>
     <child>
-      <object class="ttk.Frame" id="fraLogos">
+      <object id="fraLogos" class="ttk.Frame">
         <property name="height">200</property>
         <property name="width">200</property>
         <layout>
@@ -50,7 +51,7 @@
           </columns>
         </layout>
         <child>
-          <object class="ttk.Label" id="lblLogo">
+          <object id="lblLogo" class="ttk.Label">
             <property name="text" translatable="yes">LOGO IMG</property>
             <layout>
               <property name="column">0</property>
@@ -62,7 +63,7 @@
       </object>
     </child>
     <child>
-      <object class="ttk.Frame" id="fraHeader">
+      <object id="fraHeader" class="ttk.Frame">
         <property name="height">200</property>
         <property name="width">200</property>
         <layout>
@@ -83,7 +84,7 @@
           </columns>
         </layout>
         <child>
-          <object class="ttk.Label" id="lblImage">
+          <object id="lblImage" class="ttk.Label">
             <property name="padding">5</property>
             <property name="text" translatable="yes">ICON
 ICON</property>
@@ -96,7 +97,7 @@ ICON</property>
           </object>
         </child>
         <child>
-          <object class="ttk.Label" id="lblTitle">
+          <object id="lblTitle" class="ttk.Label">
             <property name="font">{TkCaptionFont } 20 {bold}</property>
             <property name="text" translatable="yes">INICIAR SESIÓN</property>
             <layout>
@@ -110,7 +111,7 @@ ICON</property>
       </object>
     </child>
     <child>
-      <object class="ttk.Frame" id="fraBody">
+      <object id="fraBody" class="ttk.Frame">
         <property name="height">200</property>
         <property name="width">200</property>
         <layout>
@@ -139,7 +140,7 @@ ICON</property>
           </columns>
         </layout>
         <child>
-          <object class="ttk.Label" id="lblTitle_1">
+          <object id="lblTitle_1" class="ttk.Label">
             <property name="font">{TkDefaultFont } 14 {bold}</property>
             <property name="text" translatable="yes">USUARIO</property>
             <layout>
@@ -151,7 +152,7 @@ ICON</property>
           </object>
         </child>
         <child>
-          <object class="ttk.Entry" id="eUser">
+          <object id="eUser" class="ttk.Entry">
             <property name="font">{TkDefaultFont } 20 {}</property>
             <property name="justify">center</property>
             <property name="textvariable">string:varEUSER</property>
@@ -165,7 +166,7 @@ ICON</property>
           </object>
         </child>
         <child>
-          <object class="ttk.Label" id="lblTitle_2">
+          <object id="lblTitle_2" class="ttk.Label">
             <property name="font">{TkDefaultFont } 14 {bold}</property>
             <property name="text" translatable="yes">CONTRASEÑA</property>
             <layout>
@@ -177,7 +178,7 @@ ICON</property>
           </object>
         </child>
         <child>
-          <object class="ttk.Entry" id="ePWD">
+          <object id="ePWD" class="ttk.Entry">
             <property name="font">{TkDefaultFont } 20 {}</property>
             <property name="justify">center</property>
             <property name="show">-</property>
@@ -191,10 +192,22 @@ ICON</property>
             </layout>
           </object>
         </child>
+        <child>
+          <object id="lblVersion" class="ttk.Label">
+            <property name="font">{ } 8 {bold}</property>
+            <property name="text" translatable="yes">versión [ 1.4.2024 ]</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property name="sticky">se</property>
+            </layout>
+          </object>
+        </child>
       </object>
     </child>
     <child>
-      <object class="ttk.Frame" id="fraBtns">
+      <object id="fraBtns" class="ttk.Frame">
         <property name="height">200</property>
         <property name="width">200</property>
         <layout>
@@ -218,7 +231,7 @@ ICON</property>
           </columns>
         </layout>
         <child>
-          <object class="ttk.Button" id="btnAEPTAR">
+          <object id="btnAEPTAR" class="ttk.Button">
             <property name="command">btnAEPTARClick</property>
             <property name="text" translatable="yes">ACEPTAR</property>
             <layout>
@@ -231,7 +244,7 @@ ICON</property>
           </object>
         </child>
         <child>
-          <object class="ttk.Button" id="btnCANCELAR">
+          <object id="btnCANCELAR" class="ttk.Button">
             <property name="command">btnCANCELARClick</property>
             <property name="text" translatable="yes">CANCELAR</property>
             <layout>
