@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <interface>
-  <object class="tk.Frame" id="fraMain">
+  <object id="fraMain" class="tk.Frame">
     <property name="height">600</property>
     <property name="width">800</property>
     <layout>
@@ -25,7 +25,7 @@
       </columns>
     </layout>
     <child>
-      <object class="tk.Frame" id="fraCONFIGS">
+      <object id="fraCONFIGS" class="tk.Frame">
         <property name="borderwidth">2</property>
         <property name="height">0</property>
         <property name="padx">10</property>
@@ -68,7 +68,7 @@
           </columns>
         </layout>
         <child>
-          <object class="ttk.Frame" id="fraHeader">
+          <object id="fraHeader" class="ttk.Frame">
             <property name="height">0</property>
             <property name="width">0</property>
             <layout>
@@ -91,7 +91,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Label" id="lblLogo">
+              <object id="lblLogo" class="ttk.Label">
                 <property name="text" translatable="yes">Logo</property>
                 <layout>
                   <property name="column">0</property>
@@ -102,7 +102,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblTitle">
+              <object id="lblTitle" class="ttk.Label">
                 <property name="font">{TkCaptionFont } 20 {bold}</property>
                 <property name="padding">10</property>
                 <property name="text" translatable="yes">CONFIGURACIÓN</property>
@@ -117,7 +117,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="fraCARRIER">
+          <object id="fraCARRIER" class="ttk.Frame">
             <property name="height">0</property>
             <property name="padding">10</property>
             <property name="width">0</property>
@@ -141,7 +141,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Label" id="lblTitle_1">
+              <object id="lblTitle_1" class="ttk.Label">
                 <property name="text" translatable="yes">OPERADOR</property>
                 <layout>
                   <property name="column">0</property>
@@ -152,11 +152,11 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Combobox" id="cmbCARRIER">
+              <object id="cmbCARRIER" class="ttk.Combobox">
                 <property name="justify">center</property>
                 <property name="state">readonly</property>
                 <property name="textvariable">string:varCmbCARRIER</property>
-                <bind add="" handler="cmbCARRIERChange" sequence="&lt;&lt;ComboboxSelected&gt;&gt;" />
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="cmbCARRIERChange" add="" />
                 <layout>
                   <property name="column">1</property>
                   <property name="propagate">True</property>
@@ -168,7 +168,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="fraVALORESDEBTS">
+          <object id="fraVALORESDEBTS" class="ttk.Frame">
             <property name="height">0</property>
             <property name="padding">10</property>
             <property name="width">0</property>
@@ -198,7 +198,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Label" id="lblTitle_2">
+              <object id="lblTitle_2" class="ttk.Label">
                 <property name="anchor">center</property>
                 <property name="font">{TkCaptionFont 20} 12 {bold}</property>
                 <property name="padding">3</property>
@@ -212,7 +212,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblTitle_3">
+              <object id="lblTitle_3" class="ttk.Label">
                 <property name="text" translatable="yes">PAÍS</property>
                 <layout>
                   <property name="column">0</property>
@@ -223,11 +223,11 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Combobox" id="cmbMCC">
+              <object id="cmbMCC" class="ttk.Combobox">
                 <property name="justify">center</property>
                 <property name="state">readonly</property>
                 <property name="textvariable">string:varCmbMCC</property>
-                <bind add="" handler="cmbMCCChange" sequence="&lt;&lt;ComboboxSelected&gt;&gt;" />
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="cmbMCCChange" add="" />
                 <layout>
                   <property name="column">1</property>
                   <property name="pady">5</property>
@@ -238,7 +238,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblTitle_4">
+              <object id="lblTitle_4" class="ttk.Label">
                 <property name="text" translatable="yes">OPERADOR</property>
                 <layout>
                   <property name="column">0</property>
@@ -249,12 +249,12 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Combobox" id="cmbMNC">
+              <object id="cmbMNC" class="ttk.Combobox">
                 <property name="justify">center</property>
                 <property name="state">readonly</property>
                 <property name="textvariable">string:varCmbMNC</property>
                 <property name="validate">key</property>
-                <bind add="" handler="cmbMNCChange" sequence="&lt;&lt;ComboboxSelected&gt;&gt;" />
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="cmbMNCChange" add="" />
                 <layout>
                   <property name="column">1</property>
                   <property name="pady">5</property>
@@ -265,7 +265,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblTitle_5">
+              <object id="lblTitle_5" class="ttk.Label">
                 <property name="text" translatable="yes">ÁREA</property>
                 <layout>
                   <property name="column">0</property>
@@ -276,7 +276,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Entry" id="eLAC">
+              <object id="eLAC" class="ttk.Entry">
                 <property name="justify">center</property>
                 <property name="textvariable">string:varELAC</property>
                 <property name="validate">all</property>
@@ -292,7 +292,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblTitle_6">
+              <object id="lblTitle_6" class="ttk.Label">
                 <property name="text" translatable="yes">CELDA</property>
                 <layout>
                   <property name="column">0</property>
@@ -303,7 +303,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Entry" id="eCI">
+              <object id="eCI" class="ttk.Entry">
                 <property name="justify">center</property>
                 <property name="textvariable">string:varECI</property>
                 <property name="validate">all</property>
@@ -321,7 +321,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="fraNUVELESRXTX">
+          <object id="fraNUVELESRXTX" class="ttk.Frame">
             <property name="height">0</property>
             <property name="padding">10</property>
             <property name="width">0</property>
@@ -337,7 +337,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Label" id="lblTitle_7">
+              <object id="lblTitle_7" class="ttk.Label">
                 <property name="font">{TkCaptionFont } 12 {bold}</property>
                 <property name="padding">3</property>
                 <property name="text" translatable="yes">NIVELES DE SERVICIO</property>
@@ -350,7 +350,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblTitle_8">
+              <object id="lblTitle_8" class="ttk.Label">
                 <property name="font">TkDefaultFont</property>
                 <property name="padding">3</property>
                 <property name="text" translatable="yes">RXGAIN</property>
@@ -362,7 +362,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Scale" id="sleRXGAIN">
+              <object id="sleRXGAIN" class="ttk.Scale">
                 <property name="command">sleRXGAINChange</property>
                 <property name="from_">1</property>
                 <property name="orient">horizontal</property>
@@ -379,7 +379,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblTitle_9">
+              <object id="lblTitle_9" class="ttk.Label">
                 <property name="text" translatable="yes">POWER</property>
                 <layout>
                   <property name="column">0</property>
@@ -389,7 +389,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Scale" id="slePOWER">
+              <object id="slePOWER" class="ttk.Scale">
                 <property name="command">slePOWERChange</property>
                 <property name="from_">1</property>
                 <property name="orient">horizontal</property>
@@ -406,7 +406,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblRXGAINVal">
+              <object id="lblRXGAINVal" class="ttk.Label">
                 <property name="text" translatable="yes">1</property>
                 <layout>
                   <property name="column">2</property>
@@ -416,7 +416,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblPOWERVal">
+              <object id="lblPOWERVal" class="ttk.Label">
                 <property name="text" translatable="yes">1</property>
                 <layout>
                   <property name="column">2</property>
@@ -428,7 +428,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="fraRANGODESERVICIO">
+          <object id="fraRANGODESERVICIO" class="ttk.Frame">
             <property name="height">0</property>
             <property name="padding">10</property>
             <property name="width">0</property>
@@ -444,7 +444,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Label" id="lblTitle_10">
+              <object id="lblTitle_10" class="ttk.Label">
                 <property name="font">{TkCaptionFont } 12 {bold}</property>
                 <property name="text" translatable="yes">RANGO DE SERVICIO</property>
                 <layout>
@@ -456,7 +456,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblTitle_11">
+              <object id="lblTitle_11" class="ttk.Label">
                 <property name="text" translatable="yes">NIVEL DE ALCANCE DE SEÑAL</property>
                 <layout>
                   <property name="column">0</property>
@@ -466,7 +466,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Scale" id="sleTA">
+              <object id="sleTA" class="ttk.Scale">
                 <property name="command">sleTAChange</property>
                 <property name="from_">0</property>
                 <property name="orient">horizontal</property>
@@ -483,7 +483,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Label" id="lblTAval">
+              <object id="lblTAval" class="ttk.Label">
                 <property name="text" translatable="yes">0</property>
                 <layout>
                   <property name="column">2</property>
@@ -495,7 +495,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="fraIDENTIFICADORDEBTS">
+          <object id="fraIDENTIFICADORDEBTS" class="ttk.Frame">
             <property name="height">0</property>
             <property name="padding">10</property>
             <property name="width">0</property>
@@ -516,7 +516,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Label" id="lblTitle_12">
+              <object id="lblTitle_12" class="ttk.Label">
                 <property name="font">{TkCaptionFont } 12 {bold}</property>
                 <property name="text" translatable="yes">IDENTIFICADOR DE BTS</property>
                 <layout>
@@ -527,7 +527,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Frame" id="fraInfoGroup">
+              <object id="fraInfoGroup" class="ttk.Frame">
                 <property name="height">0</property>
                 <property name="padding">5</property>
                 <property name="width">0</property>
@@ -552,7 +552,7 @@
                   </columns>
                 </layout>
                 <child>
-                  <object class="ttk.Label" id="lblTitle_13">
+                  <object id="lblTitle_13" class="ttk.Label">
                     <property name="font">{TkCaptionFont } 12 {bold}</property>
                     <property name="text" translatable="yes">MCC</property>
                     <layout>
@@ -563,7 +563,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Label" id="lblTitle_14">
+                  <object id="lblTitle_14" class="ttk.Label">
                     <property name="font">{TkCaptionFont } 12 {bold}</property>
                     <property name="text" translatable="yes">MNC</property>
                     <layout>
@@ -574,7 +574,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Label" id="lblTitle_15">
+                  <object id="lblTitle_15" class="ttk.Label">
                     <property name="font">{TkCaptionFont } 12 {bold}</property>
                     <property name="text" translatable="yes">LAC</property>
                     <layout>
@@ -585,7 +585,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Label" id="lblTitle_16">
+                  <object id="lblTitle_16" class="ttk.Label">
                     <property name="font">{TkCaptionFont } 12 {bold}</property>
                     <property name="text" translatable="yes">CI</property>
                     <layout>
@@ -596,7 +596,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Label" id="lblMCCval">
+                  <object id="lblMCCval" class="ttk.Label">
                     <property name="font">{TkCaptionFont } 16 {bold}</property>
                     <property name="foreground">#ff0000</property>
                     <property name="justify">left</property>
@@ -610,7 +610,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Label" id="lblMNCval">
+                  <object id="lblMNCval" class="ttk.Label">
                     <property name="font">{TkCaptionFont } 16 {bold}</property>
                     <property name="foreground">#ff0000</property>
                     <property name="text" translatable="yes">----</property>
@@ -623,7 +623,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Label" id="lblLACval">
+                  <object id="lblLACval" class="ttk.Label">
                     <property name="font">{TkCaptionFont } 16 {bold}</property>
                     <property name="foreground">#ff0000</property>
                     <property name="text" translatable="yes">----</property>
@@ -636,7 +636,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Label" id="lblCIval">
+                  <object id="lblCIval" class="ttk.Label">
                     <property name="font">{TkCaptionFont } 16 {bold}</property>
                     <property name="foreground">#ff0000</property>
                     <property name="text" translatable="yes">----</property>
@@ -653,7 +653,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="fraBTNS">
+          <object id="fraBTNS" class="ttk.Frame">
             <property name="height">0</property>
             <property name="padding">5</property>
             <property name="width">0</property>
@@ -681,7 +681,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Button" id="btnCANCELAR">
+              <object id="btnCANCELAR" class="ttk.Button">
                 <property name="command">btnCANCELARClick</property>
                 <property name="cursor">arrow</property>
                 <property name="takefocus">true</property>
@@ -697,7 +697,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Button" id="btnAPLICARCONFIG">
+              <object id="btnAPLICARCONFIG" class="ttk.Button">
                 <property name="command">btnAPLICARCONFIGClick</property>
                 <property name="text" translatable="yes">
   APLICAR LOS VALORES SELECCIONADOS
@@ -711,7 +711,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Button" id="btnCERRAR">
+              <object id="btnCERRAR" class="ttk.Button">
                 <property name="command">btnCERRARClick</property>
                 <property name="state">normal</property>
                 <property name="text" translatable="yes">
@@ -733,7 +733,7 @@
       </object>
     </child>
     <child>
-      <object class="tk.Frame" id="fraSYSTEM">
+      <object id="fraSYSTEM" class="tk.Frame">
         <property name="borderwidth">2</property>
         <property name="height">0</property>
         <property name="padx">10</property>
@@ -776,7 +776,7 @@
           </columns>
         </layout>
         <child>
-          <object class="ttk.Frame" id="fraBTNS_1">
+          <object id="fraBTNS_1" class="ttk.Frame">
             <property name="height">0</property>
             <property name="padding">10</property>
             <property name="width">0</property>
@@ -795,7 +795,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Button" id="btnDETENER">
+              <object id="btnDETENER" class="ttk.Button">
                 <property name="command">btnDETENERClick</property>
                 <property name="text" translatable="yes">DETENER</property>
                 <layout>
@@ -807,7 +807,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Button" id="btnEJECUTAR">
+              <object id="btnEJECUTAR" class="ttk.Button">
                 <property name="command">btnEJECUTARClick</property>
                 <property name="text" translatable="yes">EJECUTAR</property>
                 <layout>
@@ -821,7 +821,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="fraTEXTOMENSAJE">
+          <object id="fraTEXTOMENSAJE" class="ttk.Frame">
             <property name="height">0</property>
             <property name="padding">10</property>
             <property name="width">0</property>
@@ -848,7 +848,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Label" id="lblTitle_17">
+              <object id="lblTitle_17" class="ttk.Label">
                 <property name="font">{TkCaptionFont } 12 {bold}</property>
                 <property name="text" translatable="yes">TEXTO DEL MENSAJE</property>
                 <layout>
@@ -860,7 +860,7 @@
               </object>
             </child>
             <child>
-              <object class="tk.Text" id="txtTEXTOMENSAJE">
+              <object id="txtTEXTOMENSAJE" class="tk.Text">
                 <property name="height">7</property>
                 <property name="maxundo">10</property>
                 <property name="undo">true</property>
@@ -875,7 +875,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Button" id="btnAPLICARTEXTOMENSJE">
+              <object id="btnAPLICARTEXTOMENSJE" class="ttk.Button">
                 <property name="command">btnAPLICARTEXTOMENSJEClick</property>
                 <property name="text" translatable="yes">APLICAR</property>
                 <layout>
@@ -890,7 +890,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="fraESTATUSSISTEMA">
+          <object id="fraESTATUSSISTEMA" class="ttk.Frame">
             <property name="height">0</property>
             <property name="padding">10</property>
             <property name="width">0</property>
@@ -914,7 +914,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Label" id="lblTitle_18">
+              <object id="lblTitle_18" class="ttk.Label">
                 <property name="anchor">w</property>
                 <property name="font">{TkCaptionFont } 12 {bold}</property>
                 <property name="text" translatable="yes">ESTATUS DEL SISTEMA</property>
@@ -926,7 +926,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Frame" id="fraGroup">
+              <object id="fraGroup" class="ttk.Frame">
                 <property name="height">0</property>
                 <property name="width">0</property>
                 <layout>
@@ -955,7 +955,7 @@
                   </columns>
                 </layout>
                 <child>
-                  <object class="ttk.Frame" id="fraDIAGNOSTICO">
+                  <object id="fraDIAGNOSTICO" class="ttk.Frame">
                     <property name="height">0</property>
                     <property name="padding">10</property>
                     <property name="width">0</property>
@@ -966,7 +966,7 @@
                       <property name="sticky">ns</property>
                     </layout>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_19">
+                      <object id="lblTitle_19" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {bold}</property>
                         <property name="text" translatable="yes">DIAGNOSTICO INICIAL</property>
                         <layout>
@@ -979,7 +979,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_20">
+                      <object id="lblTitle_20" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {}</property>
                         <property name="text" translatable="yes">T4552</property>
                         <layout>
@@ -991,7 +991,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblTERMINALval">
+                      <object id="lblTERMINALval" class="ttk.Label">
                         <layout>
                           <property name="column">1</property>
                           <property name="propagate">True</property>
@@ -1000,7 +1000,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_21">
+                      <object id="lblTitle_21" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {}</property>
                         <property name="text" translatable="yes">R4544</property>
                         <layout>
@@ -1012,7 +1012,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblRedval">
+                      <object id="lblRedval" class="ttk.Label">
                         <layout>
                           <property name="column">1</property>
                           <property name="propagate">True</property>
@@ -1021,7 +1021,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_22">
+                      <object id="lblTitle_22" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {}</property>
                         <property name="text" translatable="yes">S4552</property>
                         <layout>
@@ -1033,7 +1033,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblSERVIDORval">
+                      <object id="lblSERVIDORval" class="ttk.Label">
                         <layout>
                           <property name="column">1</property>
                           <property name="propagate">True</property>
@@ -1042,7 +1042,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_23">
+                      <object id="lblTitle_23" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {}</property>
                         <property name="text" translatable="yes">R4144</property>
                         <layout>
@@ -1054,7 +1054,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblRADIOval">
+                      <object id="lblRADIOval" class="ttk.Label">
                         <layout>
                           <property name="column">1</property>
                           <property name="propagate">True</property>
@@ -1065,7 +1065,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Frame" id="fraUPTIME">
+                  <object id="fraUPTIME" class="ttk.Frame">
                     <property name="height">0</property>
                     <property name="padding">10</property>
                     <property name="width">0</property>
@@ -1076,7 +1076,7 @@
                       <property name="sticky">ns</property>
                     </layout>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_24">
+                      <object id="lblTitle_24" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {bold}</property>
                         <property name="text" translatable="yes">UPTIME DEL SISTEMA</property>
                         <layout>
@@ -1088,7 +1088,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblUPTIMEval">
+                      <object id="lblUPTIMEval" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 24 {bold}</property>
                         <property name="text" translatable="yes">00:00:00</property>
                         <layout>
@@ -1101,7 +1101,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Frame" id="fraSERVICIOS">
+                  <object id="fraSERVICIOS" class="ttk.Frame">
                     <property name="height">0</property>
                     <property name="padding">10</property>
                     <property name="width">0</property>
@@ -1112,7 +1112,7 @@
                       <property name="sticky">ns</property>
                     </layout>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_25">
+                      <object id="lblTitle_25" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {bold}</property>
                         <property name="text" translatable="yes">ESTADO DE SERVICIO</property>
                         <layout>
@@ -1125,7 +1125,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_26">
+                      <object id="lblTitle_26" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {}</property>
                         <property name="text" translatable="yes">A5354</property>
                         <layout>
@@ -1137,7 +1137,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblASTERISKval">
+                      <object id="lblASTERISKval" class="ttk.Label">
                         <layout>
                           <property name="column">1</property>
                           <property name="propagate">True</property>
@@ -1146,7 +1146,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_27">
+                      <object id="lblTitle_27" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {}</property>
                         <property name="text" translatable="yes">S4950</property>
                         <layout>
@@ -1158,7 +1158,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblSIPAUTHSERVERval">
+                      <object id="lblSIPAUTHSERVERval" class="ttk.Label">
                         <layout>
                           <property name="column">1</property>
                           <property name="propagate">True</property>
@@ -1167,7 +1167,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_28">
+                      <object id="lblTitle_28" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {}</property>
                         <property name="text" translatable="yes">S4D51</property>
                         <layout>
@@ -1179,7 +1179,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblSMQUEUEval">
+                      <object id="lblSMQUEUEval" class="ttk.Label">
                         <layout>
                           <property name="column">1</property>
                           <property name="propagate">True</property>
@@ -1188,7 +1188,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblTitle_29">
+                      <object id="lblTitle_29" class="ttk.Label">
                         <property name="font">{TkCaptionFont } 10 {}</property>
                         <property name="text" translatable="yes">B5453</property>
                         <layout>
@@ -1200,7 +1200,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Label" id="lblBTSval">
+                      <object id="lblBTSval" class="ttk.Label">
                         <layout>
                           <property name="column">1</property>
                           <property name="propagate">True</property>
@@ -1215,9 +1215,9 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="fraCargaSistema">
+          <object id="fraCargaSistema" class="ttk.Frame">
             <property name="height">0</property>
-            <property name="padding">10</property>
+            <property name="padding">0</property>
             <property name="width">0</property>
             <layout>
               <property name="column">0</property>
@@ -1245,7 +1245,7 @@
               </columns>
             </layout>
             <child>
-              <object class="ttk.Label" id="lblTitle_30">
+              <object id="lblTitle_30" class="ttk.Label">
                 <property name="font">{TkCaptionFont } 20 {bold}</property>
                 <property name="foreground">#ff0000</property>
                 <property name="text" translatable="yes">CARGA DEL SISTEMA</property>
@@ -1257,7 +1257,7 @@
               </object>
             </child>
             <child>
-              <object class="tk.Text" id="txtCARGASISTEMA">
+              <object id="txtCARGASISTEMA" class="tk.Text">
                 <property name="autoseparators">true</property>
                 <property name="font">{TkCaptionFont } 8 {}</property>
                 <property name="height">16</property>
@@ -1275,7 +1275,7 @@
               </object>
             </child>
             <child>
-              <object class="ttk.Scrollbar" id="sBarCargaSistema">
+              <object id="sBarCargaSistema" class="ttk.Scrollbar">
                 <property name="orient">vertical</property>
                 <layout>
                   <property name="column">1</property>
@@ -1288,7 +1288,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Separator" id="Separator_1">
+          <object id="Separator_1" class="ttk.Separator">
             <property name="orient">horizontal</property>
             <layout>
               <property name="column">0</property>
@@ -1299,7 +1299,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Separator" id="Separator_2">
+          <object id="Separator_2" class="ttk.Separator">
             <property name="orient">horizontal</property>
             <layout>
               <property name="column">0</property>
@@ -1310,7 +1310,7 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Separator" id="Separator_3">
+          <object id="Separator_3" class="ttk.Separator">
             <property name="orient">horizontal</property>
             <layout>
               <property name="column">0</property>
@@ -1321,15 +1321,56 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Label" id="lblVersion">
-            <property name="font">{ } 8 {bold}</property>
-            <property name="text" translatable="yes">versión 1.4.2024</property>
+          <object id="fraEnregasVersion" class="ttk.Frame">
+            <property name="height">200</property>
+            <property name="padding">5</property>
+            <property name="width">200</property>
             <layout>
               <property name="column">0</property>
               <property name="propagate">True</property>
-              <property name="row">7</property>
-              <property name="sticky">se</property>
+              <property name="row">8</property>
+              <property name="sticky">ew</property>
+              <rows>
+                <row id="0">
+                  <property name="weight">0</property>
+                </row>
+                <row id="1">
+                  <property name="weight">0</property>
+                </row>
+              </rows>
+              <columns>
+                <column id="0">
+                  <property name="weight">1</property>
+                </column>
+              </columns>
             </layout>
+            <child>
+              <object id="btnEntregas" class="ttk.Button">
+                <property name="command">btnENTREGASClick</property>
+                <property name="cursor">arrow</property>
+                <property name="takefocus">true</property>
+                <property name="text" translatable="yes">  MOSTRAR ENTREGAS  </property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">ew</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="lblVersion" class="ttk.Label">
+                <property name="font">{TkDefaultFont } 8 {bold}</property>
+                <property name="text" translatable="yes">versión 1.4.2024</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">se</property>
+                </layout>
+              </object>
+            </child>
           </object>
         </child>
       </object>
